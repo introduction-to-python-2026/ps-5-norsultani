@@ -45,13 +45,13 @@ def count_atoms_in_molecule(molecular_formula):
     atom_counts = {}
     value = 1
     for bob in split_by_capitals(molecular_formula):
-      element, number = split_at_number(bob)
+      symbols, num = split_at_number(bob)
 
       if element in atom_counts:
-        atom_counts[element] =+ number
+        atom_counts[symbols] =+ num
 
       else:
-        atom_counts[element] = number
+        atom_counts[symbols] = num
 
       
 
