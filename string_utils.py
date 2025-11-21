@@ -40,17 +40,22 @@ def split_at_number(formula):
   return letters, nums
 
 def count_atoms_in_molecule(molecular_formula):
-    """Takes a molecular formula (string) and returns a dictionary of atom counts.  
-    Example: 'H2O' → {'H': 2, 'O': 1}"""
+    
+    
+    atom_counts = {}
+    value = 1
+    for bob in split_by_capitals(molecular_formula):
+      element, number = split_at_number(bob)
 
-    # Step 1: Initialize an empty dictionary to store atom counts
+      if element in atom_counts:
+        atom_counts[element] =+ number
 
-    for atom in split_by_capitals(molecular_formula):
-        atom_name, atom_count = split_at_number(atom)
-        
-        # Step 2: Update the dictionary with the atom name and count
+      else:
+        atom_counts[element] = number
 
-    # Step 3: Return the completed dictionary
+      
+
+    return atom_counts
 
 
 
