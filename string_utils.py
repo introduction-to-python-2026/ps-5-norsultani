@@ -48,7 +48,7 @@ def count_atoms_in_molecule(molecular_formula):
       symbols, num = split_at_number(bob)
 
       if element in atom_counts:
-        atom_counts[symbols] =+ num
+        atom_counts[symbols] += num
 
       else:
         atom_counts[symbols] = num
