@@ -1,7 +1,7 @@
 
 
 
-def split_before_each_uppercases(formula):
+def split_by_capitals(formula):
     start = 0
     split_formula = []
 
